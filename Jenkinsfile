@@ -2,6 +2,12 @@ pipeline {
     agent any
 
     stages {
+        stage('Prepare') {
+            steps {
+              echo 'Update submodule'
+              sh "git submodule update --init"
+            }
+        }
         stage('Build') {
             steps {
               echo 'Building todo-node-app docker image'
