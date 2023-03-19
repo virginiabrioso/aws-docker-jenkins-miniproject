@@ -6,4 +6,6 @@ COPY ./node-todo-cicd .
 
 RUN npm install
 expose 8000
-CMD ["node","app.js","&&", "tail -f /dev/null"]
+
+WORKDIR app/node-todo-cicd
+CMD ["node","app.js"]
