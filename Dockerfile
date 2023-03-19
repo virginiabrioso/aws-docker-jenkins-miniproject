@@ -1,7 +1,8 @@
 FROM node:12.2.0-alpine
 
 WORKDIR app
-COPY ./node-todo-cicd/* .
+COPY node-todo-cicd/ .
+RUN ls -la
 
 RUN npm install
 
