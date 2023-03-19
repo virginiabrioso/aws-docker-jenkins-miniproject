@@ -4,9 +4,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-              dir("~/aws-docker-jenkins-miniproject") {
-                sh "docker build . -t todo-node-app"
-              }
+              sh "docker build . -t todo-node-app"
             }
         }
         stage('Deploy') {
