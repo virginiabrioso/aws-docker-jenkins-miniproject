@@ -108,3 +108,9 @@ So for now we have a CI env, since we have to manually trigger the pipeline job 
 1. In Jenkins go to "manage/pluginManager/available" and install "Github Integration" plugin
 2. In your Github Repo create a WebHook, first go to "settings/hooks" and click "Add webhook", then confirm you github password and create the webhook with Payload URL "http://PublicIP:8080/github-webhook"
 3. Go to your job configuration and enable "GitHub hook trigger for GITScm polling"
+
+## Yey, your CICD pipeline is done. Now everytime you change your repository Jenkins will create a build in your job pipeline with these new changes
+
+## Reference
+
+[Live DevOps Project for Resume - Jenkins CICD with GitHub Integration by TrainWithShubham](https://www.youtube.com/watch?v=nplH3BzKHPk&list=PLlfy9GnSVerRqYJgVYO0UiExj5byjrW8u&index=15)
