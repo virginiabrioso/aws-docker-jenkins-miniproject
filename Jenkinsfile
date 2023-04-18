@@ -20,8 +20,8 @@ pipeline {
                     try {
                         sh 'docker rm --force todo-node-app'
                     }
+                    sh 'docker run -d --name todo-node-app -p 8000:8000 todo-node-app'
                 }
-                sh 'docker run -d --name todo-node-app -p 8000:8000 todo-node-app'
             }
         }
     }
