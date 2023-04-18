@@ -16,12 +16,8 @@ pipeline {
         }
         stage('Deploy') {
             steps {
-                script {
-                    try {
-                        sh 'docker rm --force todo-node-app'
-                    }
-                    sh 'docker run -d --name todo-node-app -p 8000:8000 todo-node-app'
-                }
+                sh (script: 'docker rm --force todo-node-app || exit 0', returnStatus: true)
+                sh 'docker run -d --name todo-node-app -p 8000:8000 todo-node-app'
             }
         }
     }
