@@ -105,7 +105,7 @@ After that you should be to get node app by accessing <http://PublicIP:8000>
 
 So for now we have a CI env, since we have to manually trigger the pipeline job to build the Node app container. So Let's go to CD part
 
-1. In Jenkins go to "manage/pluginManager/available" and install "Github Integration" plugin
+1. In Jenkins go to "manage/pluginManager/available" and install "Github Integration" plugin. Restart Jenkins.
 2. Go to your job configuration and enable "GitHub hook trigger for GITScm polling"
 3. In your Github Repo create a WebHook, first go to "settings/hooks" and click "Add webhook", then confirm you github password and create the webhook with Payload URL "http://PublicIP:8080/github-webhook"
 4. In settings/ssh/new in Github create a new SSH Key with the output from ```sudo cat /home/ubuntu/.ssh/id_rsa.pub```
