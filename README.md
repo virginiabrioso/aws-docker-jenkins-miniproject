@@ -110,7 +110,9 @@ So for now we have a CI env, since we have to manually trigger the pipeline job 
 3. In your Github Repo create a WebHook, first go to "settings/hooks" and click "Add webhook", then confirm you github password and create the webhook with Payload URL "http://PublicIP:8080/github-webhook"
 4. In settings/ssh/new in Github create a new SSH Key with the output from ```sudo cat /home/ubuntu/.ssh/id_rsa.pub```
 
-## Yey, your CICD pipeline is done. Now everytime you change your repository Jenkins will create a build in your job pipeline with these new changes
+## Yey, your CICD pipeline is done :smile
+
+Now everytime you change your repository Jenkins will create a build in your job pipeline with these new changes
 
 ## Reference
 
